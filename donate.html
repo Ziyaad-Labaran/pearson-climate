@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate to GreenGhana Alliance</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.4rem;
+    background-color: #FBEECC;
+}
+
+.donate-button button {
+    padding: 10px;
+    border-radius: 12px;
+    border: transparent;
+    background: #28a745;
+    color: white;
+
+}
+
+.donate-button a {
+    color: white;
+
+}
+
+.logo h1 {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+}
+
+.nav-links {
+    padding: 2px;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: rgb(0, 124, 52);
+    font-size: 1.2rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+nav span {
+    color: rgb(32, 172, 90);
+}
+
+        .hero {
+            background-color: #f0f8f0;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            color: #2e8b57;
+            margin-bottom: 20px;
+        }
+
+        .hero button {
+            background-color: #2e8b57;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .donation-options label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .donation-options input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        .payment-options {
+            margin-top: 20px;
+        }
+
+        .payment-options h3 {
+            margin-bottom: 10px;
+        }
+
+        .mobile-money-instructions,
+        .bank-transfer-details {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+
+        .thank-you {
+            font-weight: bold;
+            color: #2e8b57;
+        }
+    </style>
+</head>
+
+<body>
+ <nav>
+        <div class="logo">
+            <h1><span>GREEN </span>GHANA</h1>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="">About us</a>
+            <a href="learn.html">Learn</a>
+            <a href="">Media</a>
+            <a href="act-now.html">Act Now</a>
+            <a href="">Contact us</a>
+        </div>
+        <div class="donate-button"><button> <a href="donate.html">Donate</a></button></div>
+    </nav>
+    <div class="hero">
+        <h1>Invest in a Greener Future for Ghana</h1>
+        <img src="begger.jpg" alt="GreenGhana Alliance Impact" style="max-width: 100%;">
+        <p style="margin-top: 15px;">Your contribution will directly support our vital work in planting trees, educating
+            communities, and conserving Ghana's precious natural resources.</p>
+        <button onclick="scrollToDonate()">Donate Now</button>
+    </div>
+
+    <div class="section">
+        <h2>Why Donate to GreenGhana Alliance?</h2>
+        <p>At GreenGhana Alliance, we are passionately committed to creating a sustainable and thriving environment for
+            all Ghanaians. We believe that through collective action, we can combat deforestation, promote biodiversity,
+            and empower communities to become environmental stewards.</p>
+        <ul>
+            <li><strong>Planting Trees:</strong> Restoring degraded lands and increasing our nation's green cover for a
+                healthier climate.</li>
+            <li><strong>Education Programs:</strong> Empowering children and adults with the knowledge and skills to
+                protect our environment.</li>
+            <li><strong>Conservation Efforts:</strong> Working to safeguard Ghana's unique ecosystems and wildlife for
+                future generations.</li>
+            <li><strong>Community Engagement:</strong> Partnering with local communities to ensure the long-term success
+                of our initiatives.</li>
+        </ul>
+        <p>Your generous donation will fuel these critical efforts and help us make a tangible difference across Ghana.
+        </p>
+    </div>
+
+    <div class="section donation-options" id="donate-section">
+        <h2>Choose Your Impact</h2>
+        <p>Select a donation amount that aligns with your capacity to contribute to a greener Ghana:</p>
+
+        <label>
+            <input type="radio" name="donation_amount" value="20">
+            <strong>GH₵20</strong> - Plants one tree, contributing to reforestation efforts.
+        </label>
+
+        <label>
+            <input type="radio" name="donation_amount" value="50">
+            <strong>GH₵50</strong> - Supports a community workshop on sustainable environmental practices.
+        </label>
+
+        <label>
+            <input type="radio" name="donation_amount" value="100">
+            <strong>GH₵100</strong> - Helps protect a hectare of forest through conservation initiatives.
+        </label>
+
+        <label>
+            <input type="radio" name="donation_amount" value="250">
+            <strong>GH₵250</strong> - Contributes to the development of educational materials for environmental
+            awareness.
+        </label>
+
+        <label>
+            <input type="radio" name="donation_amount" value="other">
+            <strong>Other Amount (GH₵):</strong> <input type="number" id="custom_amount" min="1">
+        </label>
+
+        <div class="payment-options">
+            <h3>Choose Your Payment Method</h3>
+
+            <div class="mobile-money-instructions">
+                <h4>Mobile Money (Ghana Only)</h4>
+                <p>You can directly send your donation via mobile money to the following details:</p>
+                <p><strong>Network:</strong> MTN Mobile Money</p>
+                <p><strong>Number:</strong> <span style="font-weight: bold;">0592507777</span></p>
+                <p><strong>Reference:</strong> Please include "Donation" and your name (optional) in the reference
+                    field.</p>
+                <p><strong>Instructions:</strong> Open your mobile money app, choose the "Send Money" option, enter the
+                    number above, specify the amount you wish to donate, and use the reference provided. Confirm the
+                    transaction.</p>
+                <label for="donor_name_mm">Your Name (Optional):</label>
+                <input type="text" id="donor_name_mm" name="donor_name_mm">
+                <label for="donor_email_mm">Your Email (Optional):</label>
+                <input type="email" id="donor_email_mm" name="donor_email_mm">
+                <button
+                    onclick="alert('Thank you for your mobile money donation! We will acknowledge it as soon as possible.')">Donate
+                    via Mobile Money</button>
+            </div>
+
+            <div class="credit-debit-card">
+                <h4>Credit/Debit Card</h4>
+                <p>For secure online payments via credit or debit card, please click the button below. You will be
+                    redirected to our secure payment gateway.</p>
+                <button onclick="window.location.href='[Your Secure Payment Gateway Link]' ">Donate with Card</button>
+            </div>
+
+            <div class="bank-transfer-details">
+                <h4>Bank Transfer</h4>
+                <p>You can also make a direct bank transfer to our account:</p>
+                <p><strong>Bank Name:</strong> Ecobank Ghana</p>
+                <p><strong>Account Name:</strong> GreenGhana Alliance </p>
+                <p><strong>Account Number:</strong> <span style="font-weight: bold;">7755 6943 5679</span></p>
+                <p><strong>Branch:</strong> Headquaters </p>
+                <p>Please include your name and "Donation" as the transfer reference. Kindly notify us of your transfer
+                    by emailing us at <a href="mailto:ziyaadlabaran@yahoo.com">GreenGhana@gmail.com</a> so we can
+                    acknowledge your generous support.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Our Commitment to Transparency</h2>
+        <p>We are committed to using your donations responsibly and effectively to maximize our impact on Ghana's
+            environment. We strive for full transparency in our operations and will regularly update our supporters on
+            the progress of our projects through our website and newsletters. We are working towards publishing regular
+            impact reports to showcase how your contributions are making a tangible difference.</p>
+    </div>
+
+    <div class="section">
+        <p class="thank-you">Thank you for your generous support in helping us build a greener and more sustainable
+            future for Ghana!</p>
+    </div>
+
+    <script>
+        function scrollToDonate() {
+            document.getElementById('donate-section').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+
+</body>
+
+</html>

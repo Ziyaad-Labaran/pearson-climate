@@ -1,0 +1,351 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Key Features Section</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+    
+    .features-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+      font-size: 2.5rem;
+      color: #2c3e50;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+    
+    .section-title.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .features-grid {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    
+    .feature-card {
+      background: white;
+      border-radius: 12px;
+      width: 320px;
+      height: 380px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      opacity: 0;
+      transform: translateY(60px);
+      transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      transform-style: preserve-3d;
+      perspective: 1000px;
+    }
+    
+    .feature-card:hover {
+      transform: translateZ(20px) scale(1.05);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    }
+    
+    .feature-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .feature-card:nth-child(1).visible { transition-delay: 0.1s; }
+    .feature-card:nth-child(2).visible { transition-delay: 0.3s; }
+    .feature-card:nth-child(3).visible { transition-delay: 0.5s; }
+    
+    /* Enhanced animations with CSS variables for dynamics */
+    .features-section {
+      --card-tilt: 0deg;
+      --card-scale: 1;
+    }
+    
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    
+    .icon-container {
+      width: 90px;
+      height: 90px;
+      background: linear-gradient(135deg, #3498db, #2ecc71);
+      background-size: 200% 200%;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 25px;
+      position: relative;
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+    
+    .feature-card:hover .icon-container {
+      transform: translateY(-10px) scale(1.1) rotate(5deg);
+      box-shadow: 0 15px 35px rgba(46, 204, 113, 0.2);
+      animation: gradientShift 3s ease infinite;
+    }
+    
+    .feature-card:nth-child(1) .icon-container {
+      background: linear-gradient(135deg, #3498db, #2980b9);
+      background-size: 200% 200%;
+    }
+    
+    .feature-card:nth-child(2) .icon-container {
+      background: linear-gradient(135deg, #e74c3c, #c0392b);
+      background-size: 200% 200%;
+    }
+    
+    .feature-card:nth-child(3) .icon-container {
+      background: linear-gradient(135deg, #2ecc71, #27ae60);
+      background-size: 200% 200%;
+    }
+    
+    .icon {
+      color: white;
+      font-size: 36px;
+      transition: transform 0.5s ease;
+    }
+    
+    .feature-card:hover .icon {
+      transform: scale(1.2) rotate(10deg);
+    }
+    
+    .feature-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+      color: #2c3e50;
+      transition: transform 0.3s ease;
+    }
+    
+    .feature-card:hover .feature-title {
+      transform: translateY(-5px);
+    }
+    
+    .feature-description {
+      color: #7f8c8d;
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 25px;
+      transition: transform 0.3s ease;
+    }
+    
+    .feature-card:hover .feature-description {
+      transform: translateY(-5px);
+    }
+    
+    .feature-button {
+      padding: 10px 20px;
+      background: transparent;
+      border: 2px solid #3498db;
+      border-radius: 25px;
+      color: #3498db;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+    
+    .feature-card:nth-child(1) .feature-button { border-color: #3498db; color: #3498db; }
+    .feature-card:nth-child(2) .feature-button { border-color: #e74c3c; color: #e74c3c; }
+    .feature-card:nth-child(3) .feature-button { border-color: #2ecc71; color: #2ecc71; }
+    
+    .feature-button:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      transition: left 0.4s ease;
+    }
+    
+    .feature-card:nth-child(1) .feature-button:before { background: #3498db; }
+    .feature-card:nth-child(2) .feature-button:before { background: #e74c3c; }
+    .feature-card:nth-child(3) .feature-button:before { background: #2ecc71; }
+    
+    .feature-card:hover .feature-button:before {
+      left: 0;
+    }
+    
+    .feature-card:hover .feature-button {
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .card-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      transition: transform 0.5s ease;
+    }
+    
+    .card-background::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      opacity: 0;
+      transition: all 0.5s ease;
+    }
+    
+    .feature-card:nth-child(1) .card-background::before { background: radial-gradient(circle, rgba(52, 152, 219, 0.1) 0%, rgba(0, 0, 0, 0) 70%); }
+    .feature-card:nth-child(2) .card-background::before { background: radial-gradient(circle, rgba(231, 76, 60, 0.1) 0%, rgba(0, 0, 0, 0) 70%); }
+    .feature-card:nth-child(3) .card-background::before { background: radial-gradient(circle, rgba(46, 204, 113, 0.1) 0%, rgba(0, 0, 0, 0) 70%); }
+    
+    .feature-card:hover .card-background::before {
+      opacity: 1;
+      transform: scale(3);
+    }
+    
+    /* CSS-only animation effects */
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+    
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    
+    .feature-card:hover .icon-container {
+      animation: float 2s ease-in-out infinite;
+    }
+    
+    .feature-card:hover .icon {
+      animation: pulse 2s ease-in-out infinite;
+    }
+    
+    @media (max-width: 1024px) {
+      .features-grid {
+        gap: 20px;
+      }
+      
+      .feature-card {
+        width: calc(33.33% - 20px);
+        padding: 20px;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .feature-card {
+        width: calc(50% - 15px);
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .feature-card {
+        width: 100%;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+<body>
+  <section class="features-section">
+    <div class="features-container">
+      <h2 class="section-title">Key Features</h2>
+      
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="card-background"></div>
+          <div class="icon-container">
+            <i class="fas fa-leaf icon"></i>
+          </div>
+          <h3 class="feature-title">Learn About Climate Change</h3>
+          <p class="feature-description">Discover the science behind climate change, its effects, and what it means for our planet's future through interactive content.</p>
+          <button class="feature-button">Explore</button>
+        </div>
+        
+        <div class="feature-card">
+          <div class="card-background"></div>
+          <div class="icon-container">
+            <i class="fas fa-users icon"></i>
+          </div>
+          <h3 class="feature-title">Join the Movement</h3>
+          <p class="feature-description">Connect with like-minded individuals and organizations committed to making a difference in the fight against climate change.</p>
+          <button class="feature-button">Get Involved</button>
+        </div>
+        
+        <div class="feature-card">
+          <div class="card-background"></div>
+          <div class="icon-container">
+            <i class="fas fa-book-open icon"></i>
+          </div>
+          <h3 class="feature-title">Access Free Resources</h3>
+          <p class="feature-description">Browse our collection of free guides, tools, and educational materials to help you take action in your community.</p>
+          <button class="feature-button">Get Resources</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+   me and your  <figcaption>head</figcaption> are not
+  </section>
+  
+  <script>
+    // Intersection Observer for scroll animations only (no mouse movement JS)
+    const observerOptions = {
+      threshold: 0.2,
+      rootMargin: '0px 0px -100px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+    
+    // Observe section title and feature cards
+    document.addEventListener('DOMContentLoaded', () => {
+      const sectionTitle = document.querySelector('.section-title');
+      const featureCards = document.querySelectorAll('.feature-card');
+      
+      observer.observe(sectionTitle);
+      featureCards.forEach(card => observer.observe(card));
+    });
+  </script>
+</body>
+</html>
