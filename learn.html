@@ -4,8 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="learn.css">
-    <title>Learn Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>GreenGhana Alliance</title>
+    
 </head>
 
 <body>
@@ -13,357 +17,193 @@
         <div class="logo">
             <h1><span>GREEN </span>GHANA</h1>
         </div>
-        <div class="nav-links">
+        
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        
+        <div class="nav-links" id="navLinks">
             <a href="index.html">Home</a>
             <a href="learn.html">Learn</a>
             <a href="media.html">Media</a>
-            <a href="act-now.html">Act now</a>
+            <a href="act-now.html">Act Now</a>
             <a href="contact.html">Contact us</a>
         </div>
     </nav>
-    <div class="hero-section">
-        <div class="hero-text">
-            <h1> Learn About Climate Change</h1>
-            <p>Understand the climate crisis, explore local solutions, and become part of the generation that protects
-                Ghana's future.</p>
-        </div>
 
-        <div class="custom-shape-divider-bottom-1747580668">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
-                preserveAspectRatio="none">
-                <path d="M1200,0H0V120H281.94C572.9,116.24,602.45,3.86,602.45,3.86h0S632,116.24,923,120h277Z"
-                    class="shape-fill"></path>
-            </svg>
-        </div>
-    </div>
+    <main>
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Inspiring Youth to Tackle Climate Change</h1>
+                <p>Climate change affects us all but youth voices can lead the way. Join the movement and take a stand
+                    for our planet.</p>
+                <button> <a href="act-now.html">Take Action Now 📚</a></button>
+            </div>
 
-    <section>
-
-
-
-        <section class="container">
-            <section id="what-is" class="section">
-                <h2 class="section-title">What is Climate Change?</h2>
-                <div class="flex-container">
-                    <div class="text-content">
-                        <p>Climate change is when our Earth's usual weather patterns change over a long time. Think of
-                            it like this: if you suddenly got a fever and felt too hot, that would be a change in your
-                            body's normal temperature.</p>
-                        <p>The Earth is experiencing a fever! Our planet is getting warmer than it should be, and this
-                            is changing weather patterns all over the world, including here in Ghana.</p>
-                        <p>This isn't just about hot days it affects our rain patterns, ocean levels, and can cause more
-                            extreme weather like stronger storms or longer droughts.</p>
-                    </div>
-                    <div class="image-content">
-                        <img src="depositphotos_30828375-stock-photo-global-warming.jpg"
-                            alt="Earth getting warmer illustration" class="placeholder-image">
-                    </div>
-                </div>
-            </section>
-
-
-            <section id="causes" class="section">
-                <h2 class="section-title">Causes of Climate Change</h2>
-                <p>There are several key activities that contribute to climate change. Most of these are caused by
-                    people:</p>
-
-                <div class="causes-grid">
-                    <div class="cause-card">
-                        <img src="trees being cut.jpg" alt="Trees being cut">
-                        <h4>Deforestation</h4>
-                        <p>When we cut down too many trees, especially in Ghana's forests, we lose the trees that help
-                            clean our air by absorbing carbon dioxide. Trees are like the Earth's lungs!</p>
-                    </div>
-
-                    <div class="cause-card">
-                        <img src="smoke.jpg" alt="Smoke from factories">
-                        <h4>Burning Fossil Fuels</h4>
-                        <p>When we burn petrol in cars, use coal for electricity, or burn wood for cooking, we release
-                            gases that trap heat in our atmosphere, making Earth warmer.</p>
-                    </div>
-
-                    <div class="cause-card">
-                        <img src="Plastic-Waste-Recycled.jpg" alt="Plastic waste">
-                        <h4>Plastic Pollution</h4>
-                        <p>Plastic waste in our markets, streets and rivers doesn't just look bad - when it breaks down
-                            or is burned, it releases harmful gases into our air.</p>
-                    </div>
-
-                    <div class="cause-card">
-                        <img src="emmissions.jpg" alt="Factory emissions">
-                        <h4>Industrial Activity</h4>
-                        <p>Factories and industries release gases that trap heat in our atmosphere. These are called
-                            greenhouse gases because they work like a greenhouse - letting heat in but not out.</p>
-                    </div>
-                </div>
-            </section>
-
-            <section id="effects" class="section">
-                <h2 class="section-title">Effects on Ghana</h2>
-                <p>Climate change isn't just happening in far-away places - it's affecting us right here in Ghana too:
-                </p>
-
-                <div class="effects-grid">
-                    <div class="effect-card">
-                        <h4>Changing Weather Patterns</h4>
-                        <p>Northern Ghana is experiencing more droughts, while southern regions face increased flooding.
-                            This makes it harder for farmers to know when to plant their crops.</p>
-                        <img src="drought.jpg" alt="Drought in northern Ghana" class="placeholder-image">
-                    </div>
-
-                    <div class="effect-card">
-                        <h4>Impact on Farming</h4>
-                        <p>Our farmers struggle when rains don't come when expected or when they get too much at once.
-                            This affects the food we eat and the prices we pay at the market.</p>
-                        <img src="dry crops.jpg" alt="Farmers with dry crops" class="placeholder-image">
-                    </div>
-
-                    <div class="effect-card">
-                        <h4>Rising Heat and Health</h4>
-                        <p>Hotter temperatures make it difficult for students to concentrate in school and can cause
-                            health problems, especially for young children and the elderly.</p>
-                        <img src="hot class.jpg" alt="Students in hot classroom" class="placeholder-image">
-                    </div>
-
-                    <div class="effect-card">
-                        <h4>Coastal Erosion</h4>
-                        <p>Rising sea levels are causing our beaches to wash away, threatening coastal communities and
-                            important cultural sites along Ghana's coast.</p>
-                        <img src="costal erosion.png" alt="Coastal erosion in Ghana" class="placeholder-image">
-                    </div>
-                </div>
-            </section>
-
-            <section id="actions" class="section">
-                <h2 class="section-title">What Can We Do?</h2>
-                <p>The good news is that young people like you can make a big difference! Here are some actions you can
-                    take:</p>
-
-                <div class="actions-grid">
-                    <div class="action-card">
-                        <div class="icon">🌱</div>
-                        <h4>Plant a Tree</h4>
-                        <p>Join tree-planting events in your community or start one at your school. Even a single tree
-                            helps!</p>
-                    </div>
-
-                    <div class="action-card">
-                        <div class="icon">👥</div>
-                        <h4>Join an Eco Club</h4>
-                        <p>Start or join an environmental club at school to learn and take action together with your
-                            friends.</p>
-                    </div>
-
-                    <div class="action-card">
-                        <div class="icon">🍶</div>
-                        <h4>Use Reusable Items</h4>
-                        <p>Bring a reusable water bottle to school instead of buying sachet water in plastic.</p>
-                    </div>
-
-                    <div class="action-card">
-                        <div class="icon">🗣️</div>
-                        <h4>Educate Others</h4>
-                        <p>Share what you learn about climate change with your family and friends.</p>
-                    </div>
-
-                    <div class="action-card">
-                        <div class="icon">♻️</div>
-                        <h4>Recycle & Reuse</h4>
-                        <p>Find creative ways to reuse items instead of throwing them away.</p>
-                    </div>
-
-                    <div class="action-card">
-                        <div class="icon">💡</div>
-                        <h4>Save Energy</h4>
-                        <p>Turn off lights and appliances when not in use to reduce electricity consumption.</p>
-                    </div>
-                </div>
-            </section>
+            <div class="arrow-icon">
+                <i class="fa-solid fa-caret-down fa-bounce fa-2xl" style="color: #ffffff;"></i>
+            </div>
         </section>
 
+        <section class="about-us">
+            <div class="about-text">
+                <h1><span>About Us</span></h1>
+                <p>GreenGhana Alliance is a youth-powered movement creating real change for our environment. We believe
+                    that young people have the passion and energy to lead the fight against climate change. Through
+                    education, tree planting, cleanup campaigns, and digital action, we're building a greener, stronger future together.
+                    Whether you're in school, part of a club, or just want to make a difference, there's a place for you here.
+                </p>
+                <p>At the heart of our campaign is the belief that young voices matter. We focus on raising awareness
+                    about what climate change is, what causes it, how it affects our environment, and what we can all do
+                    to create solutions. From planting trees and reducing plastic waste, to organizing school campaigns
+                    and cleanup drives, we're showing that small actions—when multiplied can change the world.</p>
+                <button> <a href="learn.html">Learn More</a></button>
+            </div>
+            <div class="about-image">
+               <img src="image-301-1024x683.png" alt="">
+            </div>
+        </section>
 
-        <div class="container">
-            <section id="quiz-section">
-                <div class="section-header">
-                    <div class="section-icon">❓</div>
-                    <h2>Which Eco Hero Are You?</h2>
+        <section class="about-us">
+            <div class="about-image">
+               <img src="ipcc-rapid-action-required-against-global-warming-2000x1200.jpg" alt="">
+            </div>
+            <div class="about-text">
+                <h1><span>Understanding Climate change</span></h1>
+                <p> 🌍 Climate change means long term shifts in temperatures and weather patterns.
+                    These changes are mostly caused by human activities like burning fossil fuels and cutting down
+                    forests.
+                    As a result, we're seeing more heatwaves, floods, and rising sea levels.
+                    But there's hope if we learn, act, and protect our planet, we can create a better future.</p>
+                <p>In Ghana and across Africa, many communities are already feeling the impact: farmers face droughts,
+                    floods destroy homes, and health risks are rising. But here's the truth—we still have time to change the story.
+                    Fighting climate change isn't just for scientists or politicians. It is something we can all be part
+                    of. By learning more, spreading awareness, and making eco-friendly choices, young people like you
+                    can lead the way.</p>
+                <button> <a href="learn.html">Learn More</a></button>
+            </div>
+        </section>
+
+        <section class="join-section">
+            <h1>Why Join Us</h1>
+            <div class="cards">
+                <div class="card">
+                      <img src="1f333.png" alt="">
+                    <h1>Tree Planting Drives</h1>
+                    <p>🌱 Empowering youth to green their communities, one tree at a time</p>
+                </div>
+                <div class="card">
+                     <img src="cleaner-icon.webp" alt="">
+                    <h1>CleanUp Campaigns</h1>
+                    <p>🧼 Organizing school and neighborhood clean-up days across Ghana.</p>
+                </div>
+                <div class="card">
+                   <img src="2232688.png" alt="">
+                    <h1>Climate Education</h1>
+                    <p>📚 Fun, interactive lessons on climate change and sustainability</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="video-section">
+            <h1>Our <span>Climate,</span> Our Responsibility</h1>
+            <div class="items">
+                <iframe src="https://www.youtube.com/embed/HHqXt3cd9-g?si=25BrpT-t86NB8LkR"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+        </section>
+
+        <section class="impact-section" id="impact">
+            <h2>Our Green Impact So Far</h2>
+            <p class="subtitle">Showcasing our collective environmental and community impact.</p>
+            <div class="counters-container">
+                <div class="counter-item">
+                    <div class="icon-div-placeholder icon-tree">
+                        <div class="canopy"></div>
+                        <div class="trunk"></div>
+                    </div>
+                    <div class="number" data-target="12580">0</div>
+                    <div class="label">Trees Planted🌳</div>
                 </div>
 
-                <p>Take this fun quiz to discover which environmental hero matches your personality and interests!</p>
-
-                <div class="quiz-container">
-                    <div id="quiz-start">
-                        <button id="start-quiz-btn">Start Quiz</button>
-                    </div>
-
-                    <div id="quiz-questions">
-                        <div class="quiz-question active" data-question="1">
-                            <h3>Question 1: What would you enjoy doing on a free weekend?</h3>
-                            <div class="quiz-options">
-                                <div class="quiz-option" data-value="a">Hiking in nature and identifying plants</div>
-                                <div class="quiz-option" data-value="b">Attending a community meeting about local issues
-                                </div>
-                                <div class="quiz-option" data-value="c">Working on a DIY or craft project</div>
-                                <div class="quiz-option" data-value="d">Reading books about science and technology</div>
-                            </div>
-                        </div>
-
-                        <div class="quiz-question" data-question="2">
-                            <h3>Question 2: What environmental issue concerns you the most?</h3>
-                            <div class="quiz-options">
-                                <div class="quiz-option" data-value="a">Loss of biodiversity and habitat destruction
-                                </div>
-                                <div class="quiz-option" data-value="b">Environmental justice and policy issues</div>
-                                <div class="quiz-option" data-value="c">Waste management and plastic pollution</div>
-                                <div class="quiz-option" data-value="d">Climate change and renewable energy</div>
-                            </div>
-                        </div>
-
-                        <div class="quiz-question" data-question="3">
-                            <h3>Question 3: How do you prefer to solve problems?</h3>
-                            <div class="quiz-options">
-                                <div class="quiz-option" data-value="a">Carefully observing and documenting patterns
-                                </div>
-                                <div class="quiz-option" data-value="b">Bringing people together to find collective
-                                    solutions</div>
-                                <div class="quiz-option" data-value="c">Using creativity and resourcefulness</div>
-                                <div class="quiz-option" data-value="d">Applying scientific principles and testing ideas
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="quiz-question" data-question="4">
-                            <h3>Question 4: Which of these would you be most excited to receive as a gift?</h3>
-                            <div class="quiz-options">
-                                <div class="quiz-option" data-value="a">A field guide to local wildlife</div>
-                                <div class="quiz-option" data-value="b">A book about influential environmental activists
-                                </div>
-                                <div class="quiz-option" data-value="c">A zero-waste starter kit</div>
-                                <div class="quiz-option" data-value="d">A home renewable energy experiment kit</div>
-                            </div>
-                        </div>
-
-                        <div class="quiz-navigation">
-                            <button id="prev-btn" class="btn-secondary" disabled>Previous</button>
-                            <button id="next-btn">Next</button>
+                <div class="counter-item">
+                    <div class="icon-div-placeholder icon-school">
+                        <div class="roof"></div>
+                        <div class="building-body">
+                            <div class="door"></div>
                         </div>
                     </div>
-
-                    <div id="quiz-result" class="quiz-results">
-                        <div class="quiz-image">🌱</div>
-                        <h3>You are: The Nature Guardian!</h3>
-                        <p>You have a deep connection with the natural world and are passionate about protecting
-                            biodiversity. Like Jane Goodall or David Attenborough, you understand that every species has
-                            an important role to play in our ecosystem.</p>
-                        <p><strong>Your eco-strengths:</strong> Keen observation, patience, and a genuine love for all
-                            living things.</p>
-                        <p><strong>How you can help:</strong> Start a school wildlife garden, organize nature walks, or
-                            participate in citizen science projects tracking local species.</p>
-                        <button id="restart-quiz-btn">Retake Quiz</button>
-                    </div>
-                </div>
-            </section>
-
-            <section id="resources-section">
-                <div class="section-header">
-                    <div class="section-icon">📄</div>
-                    <h2>Downloadable Resources</h2>
+                    <div class="number" data-target="750">0</div>
+                    <div class="label">Schools Involved🏫</div>
                 </div>
 
-                <p>Access free educational materials to help teach and learn about environmental issues. Perfect for
-                    students, teachers, and eco clubs!</p>
-
-                <div class="resources-grid">
-                    <div class="resource-card">
-                        <div class="resource-thumb">📊</div>
-                        <div class="resource-info">
-                            <h3 class="resource-title">Climate Facts Poster</h3>
-                            <p class="resource-desc">Key climate change statistics and information presented in an
-                                engaging, classroom-friendly format.</p>
-                            <a href="https://www.un.org/sites/un2.un.org/files/fastfacts-what-is-climate-change.pdf"
-                                class="download-btn">Download PDF</a>
-                        </div>
+                <div class="counter-item">
+                    <div class="icon-div-placeholder icon-volunteers">
+                        <div class="person"></div>
+                        <div class="person" style="transform: scale(0.9); margin-top: 5px;"></div>
                     </div>
-
-                    <div class="resource-card">
-                        <div class="resource-thumb">🌿</div>
-                        <div class="resource-info">
-                            <h3 class="resource-title">How to Start an Eco Club</h3>
-                            <p class="resource-desc">Step-by-step guide with planning templates, activity ideas, and
-                                tips for making your school eco club successful.</p>
-                            <a href="https://www.oneplanetnetwork.org/sites/default/files/secm.pdf"
-                                class="download-btn">Download PDF</a>
-                        </div>
-                    </div>
-
-                    <div class="resource-card">
-                        <div class="resource-thumb">🏫</div>
-                        <div class="resource-info">
-                            <h3 class="resource-title">Classroom Action Plan</h3>
-                            <p class="resource-desc">Template for creating an environmental action plan for your
-                                classroom with tracking tools.</p>
-                            <a href="https://images.examples.com/wp-content/uploads/2021/06/Students-SMART-Action-Plan-Template.zip"
-                                class="download-btn">Download PDF</a>
-                        </div>
-                    </div>
-
-                    <div class="resource-card">
-                        <div class="resource-thumb">🌎</div>
-                        <div class="resource-info">
-                            <h3 class="resource-title">Environmental Justice Handout</h3>
-                            <p class="resource-desc">Educational resource on environmental justice issues with case
-                                studies and discussion questions.</p>
-                            <a href="#" class="download-btn">Download PDF</a>
-                        </div>
-                    </div>
+                    <div class="number" data-target="2500">0</div>
+                    <div class="label">Volunteers Active🤝</div>
                 </div>
-            </section>
+
+                <div class="counter-item">
+                    <div class="icon-div-placeholder icon-plastic">
+                        <div class="bin-lid"></div>
+                        <div class="bin-body">
+                            <div class="recycle-symbol">
+                                <span>♻</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="number" data-target="5200">0</div>
+                    <div class="label">Plastic Waste Collected (kg)</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-items">
+                <h3>About us</h3>
+                <p>GreenGhana Alliance is a youth-powered movement fighting climate change through action, education,
+                    and hope</p>
+            </div>
+
+            <div class="footer-items">
+                <h3>Quick Links</h3>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+            </div>
+
+            <div class="footer-items">
+                <h3>Contact us</h3>
+                <li> <a href="tel:+233592507777">+233 59 250 7777</a></li>
+                <li><a href="mailto:GreenGhana@gmail.com">GreenGhana@gmail.com</a></li>
+            </div>
+
+            <div class="footer-items">
+                <form id="thanks" method="POST">
+                    <h3>Newsletter</h3>
+                    <input type="email" name id="email" placeholder="Enter Email" required>
+                    <button type="submit"> send</button>
+                    <p class="msg" id="congo">
+                        Thanks for subscribing!
+                    </p>
+                </form>
+            </div>
         </div>
 
-        <footer>
-            <div class="footer-container">
-                <div class="footer-items">
-                    <h3>About us</h3>
-                    <p>GreenGhana Alliance is a youth-powered movement fighting climate change through action,
-                        education,
-                        and hope</p>
-                </div>
-
-                <div class="footer-items">
-                    <h3>Quick Links</h3>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Contact</a></li>
-                </div>
-
-                <div class="footer-items">
-                    <h3>Contact us</h3>
-                    <li><a href="">Starlet 91 Road Ministries enclave</a></li>
-                    <li> <a href="tel:+233592507777">+233 59 250 7777</a></li>
-                    <li><a href="mailto:ziyaad.zalabaran@gmail.com">GreenGhana@gmail.com</a></li>
-                </div>
-
-                <div class="footer-items">
-
-                    <form id="thanks" method="POST">
-                        <h3>Newsletter</h3>
-                        <input type="email" name id="email" placeholder="Enter Email" required>
-                        <button type="submit">send</button>
-                        <p class="msg" id="congo">
-                            Thanks for subscribing!
-                        </p>
-
-                    </form>
-                </div>
-
-            </div>
-
-            <div class="copy-right">
-                <p>&copy; 2025 GreenGhana Alliance</p>
-            </div>
-        </footer>
-
-        <script src="learn.js"></script>
+        <div class="copy-right">
+            <p>&copy; 2025 GreenGhana Alliance </p>
+        </div>
+    </footer>
+<script src="index.js"></script>
 </body>
 
 </html>
