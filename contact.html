@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="contact.css" />
+    <title>Contact Us</title>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <h1><span>GREEN </span>GHANA</h1>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="learn.html">Learn</a>
+            <a href="media.html">Media</a>
+            <a href="act-now.html">Act Now</a>
+            <a href="">Contact us</a>
+        </div>
+    </nav>
+
+    <section class="contact-section" id="contact">
+        <h2>We'd Love to Hear From You</h2>
+        <p>
+            Have a question, idea, or want to join the movement? Let's connect and
+            grow greener together
+        </p>
+
+        <div class="contact-container">
+            <div class="contact-form">
+                <form action="https://formspree.io/f/mwpodpnq" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" required />
+                    <input type="email" name="email" placeholder="Your Email" required />
+                    <input type="text" name="subject" placeholder="Subject (Optional)" />
+                    <textarea name="message" rows="5" placeholder="Your Message..." required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+
+            <div class="contact-info">
+                <h3>Contact Info</h3>
+                <li><i class="fas fa-envelope"></i> Greenghanaalliance@gmail.com</li>
+                <li><i class="fas fa-phone"></i> +233 59 250 7777</li>
+                <li><i class="fas fa-map-marker-alt"></i> Accra, Ghana</li>
+                <li><i class="fab fa-instagram"></i> @Greenghana_alliance</li>
+                <li><i class="fab fa-facebook"></i> @Greenghana</li>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-items">
+                <h3>About us</h3>
+                <p>
+                    GreenGhana Alliance is a youth-powered movement fighting climate
+                    change through action, education, and hope
+                </p>
+                <div>
+                    <img src="" alt="" />
+                </div>
+            </div>
+
+            <div class="footer-items">
+                <h3>Quick Links</h3>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </div>
+
+            <div class="footer-items">
+                <h3>Contact us</h3>
+                <li><a href="call:+233592507777">+233 59 250 7777</a></li>
+                <li>
+                    <a href="mailto:ziyaad.zalabaran@gmail.com">GreenGhana@gmail.com</a>
+                </li>
+            </div>
+
+            <div class="footer-items">
+                <form id="thanks" method="POST">
+                    <h3>Newsletter</h3>
+                    <input type="email" name id="email" placeholder="Enter Email" required />
+                    <button type="submit">send</button>
+                    <p class="msg" id="congo">Thanks for subscribing!</p>
+                </form>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const form = document.getElementById("thanks");
+        const successMessage = document.getElementById("congo");
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            successMessage.style.display = "block";
+        });
+    </script>
+</body>
+
+</html>
