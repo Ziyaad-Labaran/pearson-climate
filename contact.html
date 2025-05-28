@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link rel="stylesheet" href="contact.css" />
+    <link rel="stylesheet" href="contact.css">
     <title>Contact Us</title>
+  
 </head>
 
 <body>
@@ -14,7 +14,12 @@
         <div class="logo">
             <h1><span>GREEN </span>GHANA</h1>
         </div>
-        <div class="nav-links">
+        <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav-links" id="navLinks">
             <a href="index.html">Home</a>
             <a href="learn.html">Learn</a>
             <a href="media.html">Media</a>
@@ -51,7 +56,6 @@
             </div>
         </div>
     </section>
-
 
     <footer>
         <div class="footer-container">
@@ -91,13 +95,49 @@
             </div>
         </div>
     </footer>
+
     <script>
+        // Newsletter form functionality
         const form = document.getElementById("thanks");
         const successMessage = document.getElementById("congo");
 
         form.addEventListener("submit", function (e) {
             e.preventDefault();
             successMessage.style.display = "block";
+        });
+
+        // Hamburger menu functionality
+        const hamburger = document.getElementById("hamburger");
+        const navLinks = document.getElementById("navLinks");
+
+        hamburger.addEventListener("click", function () {
+            hamburger.classList.toggle("active");
+            navLinks.classList.toggle("active");
+        });
+
+        // Close menu when clicking on a link (mobile)
+        const navLinkItems = document.querySelectorAll(".nav-links a");
+        navLinkItems.forEach(link => {
+            link.addEventListener("click", function () {
+                hamburger.classList.remove("active");
+                navLinks.classList.remove("active");
+            });
+        });
+
+        // Close menu when clicking outside (mobile)
+        document.addEventListener("click", function (e) {
+            if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+                hamburger.classList.remove("active");
+                navLinks.classList.remove("active");
+            }
+        });
+
+        // Handle window resize
+        window.addEventListener("resize", function () {
+            if (window.innerWidth > 768) {
+                hamburger.classList.remove("active");
+                navLinks.classList.remove("active");
+            }
         });
     </script>
 </body>
