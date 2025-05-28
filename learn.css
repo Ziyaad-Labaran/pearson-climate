@@ -33,7 +33,7 @@
       background-color: #FBEECC;
       z-index: 100;
       width: 97%;
-      position: fixed;
+      position: static;
   }
 
 
