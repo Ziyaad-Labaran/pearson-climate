@@ -61,7 +61,7 @@
 
    .nav-links a:hover {
        color: #efe;
-       transition: var(--transition-duration);
+       transition: 0.7s;
    }
 
    .nav-links a::after {
