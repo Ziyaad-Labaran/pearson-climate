@@ -121,7 +121,7 @@
   }
 
   .hero-section {
-      height: 70vh;
+      height: 100vh;
       background: linear-gradient(rgba(0, 128, 0, 0.63), rgba(0, 0, 0, 0.856)), url(School-trip-planning.jpg);
       background-position: center;
       background-size: cover;
