@@ -458,6 +458,20 @@
       background-repeat: no-repeat;
 
   }
+  .thumb3 {
+      background: url(5d471978388e66d8835a391589a7b832.jpg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+  }
+  .thumb4 {
+      background: url(environmental-justice-is-land-justice.jpg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+  }
 
   .resource-info {
       padding: 1rem;
