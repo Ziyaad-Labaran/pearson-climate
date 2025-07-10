@@ -601,6 +601,7 @@
           background-color: #FBEECC;
           box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
           padding: 15px 0;
+          height: 100vh;
       }
 
       .nav-links.active {
