@@ -435,7 +435,6 @@
 
   .resource-thumb {
       height: 150px;
-      /* background-color: var(--tertiary-color); */
       display: flex;
       align-items: center;
       justify-content: center;
@@ -651,17 +650,7 @@
           padding: 1.5rem;
       }
 
-      .custom-shape-divider-bottom-1747580668 {
-          display: none;
+      .footer-container , .footer{
+        height: 100vh;
       }
-
-      .custom-shape-divider-bottom-1747580668 svg {
-          display: none;
-      }
-
-      .custom-shape-divider-bottom-1747580668 .shape-fill {
-
-          display: none;
-      }
-
   }
